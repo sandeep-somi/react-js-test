@@ -1,0 +1,113 @@
+body {
+    margin: 0px auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.no-padding {
+    padding: 0px;
+    margin: 0px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.header-wrapper {
+    line-height: $header-height;
+    .header-title {
+        background-color: #f3f3f3;
+        border-bottom: 1px solid #d7d9e0;
+        h1 {
+            font-size: 16px;
+        }
+        span {
+            color: #9ca0b2;
+            font-weight: 300;
+        }
+        .upload-button {
+            float: right;
+            cursor: pointer;
+            i {
+                margin-left: 10px;
+            }
+            .overlay-button {
+                position: absolute;
+                right: 30px;
+                top: 4px;
+            }
+            input {
+                border: 1px solid black;
+                opacity: 0;
+                width: 100px;
+                z-index: 150;
+                cursor: pointer;
+            }
+        }
+    }
+    .file-title {
+        min-height: $header-height;
+        background-color: $secondary-color;
+        display: flex;
+        align-items: center;
+        padding: 20px 30px;
+        h1 {
+            font-size: 18px;
+            color: #fff;
+        }
+    }
+}
+
+.sidebar {
+    background-color: #f3f3f3;
+    height: calc(100vh);
+    .list-item {
+        border-radius: 2px;
+        margin: 16px;
+        padding: 8px;
+        border-left: 5px solid #f3f3f3;
+        &:hover {
+            cursor: pointer;
+            background-color: #ececec;
+            border-left: 5px solid #ececec;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 14px;
+            font-weight: 100;
+        }
+        div {
+            height: 30px;
+            display: flex;
+            align-items: center;
+        }
+        &.active {
+            background-color: #fff;
+            border-left: 5px solid $secondary-color;
+        }
+    }
+}
+
+.file-preview {
+    padding: 40px;
+    img {
+        width: 100%;
+    }
+}
+
+.no-data-text {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    h3 {
+        font-size: 16px;
+        color: #c7c1c1;
+    }
+}
+
+
+#title {
+    display: none;
+}
