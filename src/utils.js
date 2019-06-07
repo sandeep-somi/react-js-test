@@ -30,7 +30,7 @@ export const getFileName = (fileName, fileType) => {
 export const isValid = (file) => {
   let name = file && file.name;
   let type = (/[^.]+$/.exec(name))[0];
-  if (type === 'jpeg' || type === 'jpg' || type === 'png' || type === 'png') {
+  if (type === 'jpeg' || type === 'jpg' || type === 'png' || type === 'pdf' || type === 'PDF') {
     return true
   }
   return false
