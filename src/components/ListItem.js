@@ -6,12 +6,12 @@ const ListItem = ({ name, author, active = false, onClick }) => {
   let nameToRender = name;
   let autorToRender = author;
 
-  if (name && name.length > 30) {
-    nameToRender = `${name.substring(0, 29)}...`
+  if (name && name.length > 25) {
+    nameToRender = `${name.substring(0, 24)}...`
   }
 
-  if (author && author.length > 30) {
-    autorToRender = `${author.substring(0, 29)}...`
+  if (author && author.length > 25) {
+    autorToRender = `${author.substring(0, 24)}...`
   }
 
   return (
