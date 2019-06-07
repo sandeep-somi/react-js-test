@@ -26,3 +26,12 @@ export const getFileName = (fileName, fileType) => {
 
   return name;
 }
+
+export const isValid = (file) => {
+  let name = file && file.name;
+  let type = (/[^.]+$/.exec(name))[0];
+  if (type === 'jpeg' || type === 'jpg' || type === 'png' || type === 'png') {
+    return true
+  }
+  return false
+}

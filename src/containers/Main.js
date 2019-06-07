@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import { Header, Content } from '../components';
 import { Container } from 'react-bootstrap';
-import { getType, getFileName } from '../utils';
+import { getType, getFileName, isValid } from '../utils';
 
 class Main extends Component {
   state = {
@@ -13,6 +13,11 @@ class Main extends Component {
   onUpload = ({ target: { files, value } }) => {
     let newFiles = [...this.state.files]
     const [file] = files;
+
+    if (!isValid(file)) {
+      alert("Invalid file type")
+      return
+    }
 
     let type = getType(file.type || '')
     let name = getFileName(file.name || '', file.type || '')
@@ -30,7 +35,6 @@ class Main extends Component {
   }
 
   onSelect = (file) => {
-    console.log("onselect")
     this.setState({ file });
   }
 
