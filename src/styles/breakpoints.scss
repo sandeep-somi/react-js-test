@@ -1,32 +1,5 @@
 @media(max-width:480px){
   .sidebar {
     height: auto;
-    .list-item {
-        border-radius: 2px;
-        margin: 16px;
-        padding: 8px;
-        border-left: 5px solid #f3f3f3;
-        &:hover {
-            cursor: pointer;
-            background-color: #ececec;
-            border-left: 5px solid #ececec;
-        }
-        h2 {
-            font-size: 18px;
-        }
-        h3 {
-            font-size: 14px;
-            font-weight: 100;
-        }
-        div {
-            height: 30px;
-            display: flex;
-            align-items: center;
-        }
-        &.active {
-            background-color: #fff;
-            border-left: 5px solid $secondary-color;
-        }
-    }
   }
 }
